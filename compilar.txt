@@ -1,0 +1,13 @@
+//Solo pythia
+
+g++ mymain01.cc -o mymain01 -I../include -O2 -std=c++11 -pedantic -W -Wall -Wshadow -fPIC -pthread  -L../lib -Wl, -rpath,../lib -lpythia8 -ldl
+
+//interface con Hepmc
+
+g++ mymain03.cc -o mymain03 -I../include -O2 -std=c++11 -pedantic -W -Wall -Wshadow -fPIC -pthread  -L../lib -Wl,-rpath,../lib -lpythia8 -ldl -I/miDirectorio/hepmc2.06.09/build/include -L/miDirectorio/hepmc2.06.09/build/lib -Wl,-rpath,/miDirectorio/hepmc2.06.09/build/lib -lHepMC \-DHEPMC2
+
+//interface con root
+
+g++ mymain04.cc -o mymain04 -I../include -O2 -std=c++11 -pedantic -W -Wall -Wshadow -fPIC -pthread  -L../lib -Wl,-rpath,../lib -lpythia8 -ldl `root-config --cflags --glibs` 
+
+g++ mymain04.cc -o mymain04 -I../include -O2 -std=c++11 -pedantic -W -Wall -Wshadow -fPIC -pthread  -L../lib -Wl,-rpath,../lib -lpythia8 -ldl `root-config --cflags --glibs`
