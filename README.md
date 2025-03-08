@@ -43,13 +43,13 @@ Una vez compilado el configurador en la carpeta ejemplos y tengamos el ejecutabl
 ```
 A partir de aqui se asumira que ya se cuenta con el archivo hepmc generado de pythia, y procedemos a procesarlo con delphes. Donde usaremos el configurador que implementa el detector CMS en nuestro simulacion rapida.
 ```plaintext
-$ nano /Delphes-3.5.0/cards/delphes_card_CMS.tcl
+nano /Delphes-3.5.0/cards/delphes_card_CMS.tcl
 ```
 ahora para ejecutar delphes
 ```plaintext
-$ ./DelphesHepMC2 cards/delphes_card_CMS.tcl output.root input.hepmc
+./DelphesHepMC2 cards/delphes_card_CMS.tcl output.root input.hepmc
 ```
 Con esto ya contaremos un archivo root con toda la informacion simulada de detector, es posible ejecutar un macro de analisis basico de la carpeta ejemplos del propio delphes de la siguiente manera.
 ```plaintext
-$ root -l examples/macro.C'("delphes_output.root")'
+root -l examples/macro.C'("delphes_output.root")'
 ```
